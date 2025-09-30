@@ -76,30 +76,78 @@
 
                             <button type="submit" class="submit-btn">Send Message</button>
                         </form>
+
+                        <!-- WhatsApp Quick Contact -->
+                        <div class="whatsapp-contact">
+                            <h3>Quick Contact via WhatsApp</h3>
+                            <p>Prefer to chat? Send us a quick message on WhatsApp:</p>
+                            
+                            <div class="whatsapp-options">
+                                <button class="whatsapp-btn" data-number="+233 241360585" data-message="Hello TechBlog! I have a general inquiry.">
+                                    💬 General Inquiry
+                                </button>
+                                
+                                <button class="whatsapp-btn" data-number="+233 241360585" data-message="Hello TechBlog! I need technical support.">
+                                    🔧 Technical Support
+                                </button>
+                                
+                                <button class="whatsapp-btn" data-number="+233 241360585" data-message="Hello TechBlog! I'm interested in collaboration.">
+                                    🤝 Collaboration
+                                </button>
+                                
+                                <button class="whatsapp-btn custom-message">
+                                    📝 Custom Message
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Contact Info -->
                     <div class="contact-info">
                         <h2>Other Ways to Reach Us</h2>
                         
+                        <!-- WhatsApp Contact Method -->
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <p>+233 241360585</p>
+                                <p>Quick responses during business hours</p>
+                                <a href="https://wa.me/1234567890?text=Hello%20TechBlog%21%20I%20found%20your%20website%20and%20would%20like%20to%20get%20in%20touch." 
+                                   class="whatsapp-direct-link" target="_blank">
+                                    💬 Start Chat on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+
                         <div class="contact-method">
                             <div class="contact-icon">📧</div>
                             <div class="contact-details">
                                 <h3>Email</h3>
-                                <p>Benjaminsekyere734@gmail.com</p>
+                                <p>BENJAMINSEKYERE734@GMAIL.COM</p>
                                 
                             </div>
                         </div>
 
-                        <div class="contact-method">
-                            <div class="contact-icon">💬</div>
-                            <div class="contact-details">
-                                <h3>Social Media</h3>
-                                <p>Twitter: @techblog</p>
-                                <p>GitHub: @techblog-dev</p>
+                      
+                        <!-- Business Hours -->
+                        <div class="business-hours">
+                            <h3>Business Hours</h3>
+                            <div class="hours-list">
+                                <div class="hour-item">
+                                    <span>Monday - Friday:</span>
+                                    <span>9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Saturday:</span>
+                                    <span>10:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Sunday:</span>
+                                    <span>Closed</span>
+                                </div>
                             </div>
                         </div>
-
 
                         <!-- FAQ Section -->
                         <div class="faq-section">
@@ -124,6 +172,13 @@
                                     <p>While we can't provide personalized technical support, we're happy to clarify concepts from our articles.</p>
                                 </div>
                             </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">What's the best way to get a quick response?</button>
+                                <div class="faq-answer">
+                                    <p>For quick responses, use WhatsApp during business hours. Email is best for detailed inquiries.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,11 +190,36 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 TechBlog. All rights reserved.</p>
+            <div class="footer-whatsapp">
+                <a href="https://wa.me/1234567890?text=Hello%20TechBlog%21%20I%20found%20your%20website%20and%20would%20like%20to%20get%20in%20touch." 
+                   class="whatsapp-float" target="_blank">
+                    💬 Chat with us on WhatsApp
+                </a>
+            </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Custom Message Modal -->
+    <div id="customMessageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Send Custom WhatsApp Message</h3>
+            <form id="customWhatsAppForm">
+                <div class="form-group">
+                    <label for="customName">Your Name</label>
+                    <input type="text" id="customName" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="customMessage">Your Message</label>
+                    <textarea id="customMessage" rows="4" placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send via WhatsApp</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
